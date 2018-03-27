@@ -52,8 +52,8 @@ end -- '+'
 
 symbol_table['/'] = function(...)
   local a, b = pop(2)
+  assert(b > 0, "divide by zero")
   push(math.floor(a / b))
-end -- '/'
 
 symbol_table['²'] = function(...)
   local a = pop(1)
