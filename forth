@@ -53,7 +53,7 @@ end -- '+'
 symbol_table['/'] = function(...)
   local a, b = pop(2)
   assert(b > 0, "divide by zero")
-  push(a / b)
+  push(math.floor(a / b))
 end -- '/'
 
 symbol_table.NEG = function(...)
