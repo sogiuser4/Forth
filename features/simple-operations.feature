@@ -23,6 +23,10 @@ Feature: The Forth interpreter shall understand basic operations
      When I execute "5 2 / ."
      Then I should get "2.5 ok"
 
+Scenario: Division by zero
+     When I execute "1 0 /"
+     Then I should receive the error "divide by zero"
+
   Scenario: Negation
      When I execute "1 NEG ."
      Then I should get "-1 ok"
